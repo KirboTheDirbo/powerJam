@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dl2uy8ugjfm5o"]
+[gd_scene load_steps=8 format=3 uid="uid://dl2uy8ugjfm5o"]
 
 [ext_resource type="Texture2D" uid="uid://b30u67tsj7ttl" path="res://assets/art/bat.png" id="1_vigxc"]
 
@@ -83,6 +83,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_yfnqs"]
 radius = 8.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vigxc"]
+radius = 6.0
+
 [node name="bat" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -98,3 +101,6 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_yfnqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vigxc")

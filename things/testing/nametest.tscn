@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://kej0y4ntukk1"]
+
+[ext_resource type="Script" uid="uid://un7tk35vdjw8" path="res://code/hub.gd" id="1_duyc7"]
+[ext_resource type="PackedScene" uid="uid://iv85omkqye7o" path="res://things/entites/player.tscn" id="2_03su3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_duyc7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 35.0
+offset_right = 198.0
+offset_bottom = 99.0
+
+[node name="player" parent="." instance=ExtResource("2_03su3")]
+position = Vector2(53, 150)

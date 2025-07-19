@@ -1,4 +1,4 @@
-class_name LocalStorage extends Object
+class_name LocalStorage extends Node
 
 static var _ENCRYPTION_KEY: String = "kirbo is cool";
 static var _DEBUG_MODE: bool = true;
