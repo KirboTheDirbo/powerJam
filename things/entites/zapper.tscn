@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8bcrkm1u2n3f"]
+
+[ext_resource type="Script" uid="uid://4wqafb8onsve" path="res://code/zapper.gd" id="1_5j3bn"]
+[ext_resource type="Texture2D" uid="uid://cgj3i57twkhyc" path="res://assets/art/zapper.png" id="1_ifc0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5j3bn"]
+size = Vector2(14, 8)
+
+[node name="zapper" type="Area2D"]
+script = ExtResource("1_5j3bn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ifc0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5j3bn")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(7, -1)
+target_position = Vector2(40, 0)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(7, -1)
+emitting = false
+amount = 10
+lifetime = 0.3
+one_shot = true
+explosiveness = 0.58
+direction = Vector2(20, 0)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 120.0
+linear_accel_min = -2.02
+linear_accel_max = 22.22
+radial_accel_min = -0.6
+tangential_accel_min = -1.0
+tangential_accel_max = 4.04
+damping_max = 12.121
+angle_max = 43.6
+scale_amount_max = 1.1
+color = Color(1, 1, 0, 1)
